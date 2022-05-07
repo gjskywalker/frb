@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Feb 14 15:43:24 2021
+# Process ID: 29632
+# Current directory: D:/xilinx/vivado/final1/final1.runs/design_1_im2col_mat_0_0_synth_1
+# Command line: vivado.exe -log design_1_im2col_mat_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_im2col_mat_0_0.tcl
+# Log file: D:/xilinx/vivado/final1/final1.runs/design_1_im2col_mat_0_0_synth_1/design_1_im2col_mat_0_0.vds
+# Journal file: D:/xilinx/vivado/final1/final1.runs/design_1_im2col_mat_0_0_synth_1\vivado.jou
+# Running On: LAPTOP-1OO1BSR3, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17083 MB
+#-----------------------------------------------------------
+source design_1_im2col_mat_0_0.tcl -notrace

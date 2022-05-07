@@ -1,0 +1,496 @@
+
+*** Running vivado
+    with args -log design_1_quantization_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_quantization_0_0.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_quantization_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 1261.945 ; gain = 23.824
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Lenovo/AppData/Roaming/Xilinx/Vitis/im2col'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Lenovo/AppData/Roaming/Xilinx/Vitis/mat_add'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Lenovo/AppData/Roaming/Xilinx/Vitis/matmul2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Lenovo/AppData/Roaming/Xilinx/Vitis/pool'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Lenovo/AppData/Roaming/Xilinx/Vitis/relu'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Lenovo/AppData/Roaming/Xilinx/Vitis/quantization'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/Vivado/2021.2/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1261.945 ; gain = 0.000
+Command: synth_design -top design_1_quantization_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30380
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1261.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_quantization_0_0' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ip/design_1_quantization_0_0/synth/design_1_quantization_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'quantization' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization.v:12]
+INFO: [Synth 8-6157] synthesizing module 'quantization_control_s_axi' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_control_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_control_s_axi.v:237]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_control_s_axi.v:307]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_control_s_axi' (1#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_control_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_write' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:1742]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_fifo' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_fifo' (2#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_reg_slice' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:318]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_reg_slice' (3#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:318]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_fifo__parameterized0' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_fifo__parameterized0' (3#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_buffer' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:546]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:600]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_buffer' (4#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:546]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_fifo__parameterized1' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_fifo__parameterized1' (4#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_fifo__parameterized2' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_fifo__parameterized2' (4#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:435]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:2111]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_write' (5#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:1742]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_read' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:951]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_buffer__parameterized0' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:546]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:600]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_buffer__parameterized0' (5#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:546]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_reg_slice__parameterized0' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:318]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_reg_slice__parameterized0' (5#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:318]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:1237]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_read' (6#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:951]
+INFO: [Synth 8-6157] synthesizing module 'quantization_gmem_m_axi_throttle' [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:728]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi_throttle' (7#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:728]
+INFO: [Synth 8-6155] done synthesizing module 'quantization_gmem_m_axi' (8#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization_gmem_m_axi.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'quantization' (9#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ipshared/b8b3/hdl/verilog/quantization.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_quantization_0_0' (10#1) [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ip/design_1_quantization_0_0/synth/design_1_quantization_0_0.v:59]
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[3] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[2] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[1] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARPROT[2] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARPROT[1] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARPROT[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARUSER[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[3] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[2] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[1] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWPROT[2] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWPROT[1] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWPROT[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWUSER[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_WUSER[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWID[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWSIZE[2] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWSIZE[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWSIZE[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWBURST[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWBURST[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWLOCK[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWLOCK[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_WID[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_WLAST in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARID[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARSIZE[2] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARSIZE[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARSIZE[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARBURST[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARBURST[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARLOCK[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARLOCK[0] in module quantization_gmem_m_axi is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1261.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1261.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1261.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 1261.945 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ip/design_1_quantization_0_0/constraints/quantization_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/xilinx/vivado/final1/final1.gen/sources_1/bd/design_1/ip/design_1_quantization_0_0/constraints/quantization_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/xilinx/vivado/final1/final1.runs/design_1_quantization_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/xilinx/vivado/final1/final1.runs/design_1_quantization_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1261.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1270.352 ; gain = 8.406
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:01:30 . Memory (MB): peak = 1270.352 ; gain = 8.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:01:31 . Memory (MB): peak = 1270.352 ; gain = 8.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/xilinx/vivado/final1/final1.runs/design_1_quantization_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:01:31 . Memory (MB): peak = 1270.352 ; gain = 8.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'quantization_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'quantization_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'quantization_gmem_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'quantization_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'quantization_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'quantization_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'quantization_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'quantization_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:01:35 . Memory (MB): peak = 1270.352 ; gain = 8.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 5     
+	   2 Input   52 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   19 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 7     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 5     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 8     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               96 Bit    Registers := 6     
+	               64 Bit    Registers := 12    
+	               63 Bit    Registers := 1     
+	               52 Bit    Registers := 2     
+	               36 Bit    Registers := 3     
+	               35 Bit    Registers := 3     
+	               34 Bit    Registers := 2     
+	               32 Bit    Registers := 10    
+	               26 Bit    Registers := 1     
+	               18 Bit    Registers := 4     
+	               17 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 10    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 14    
+	                1 Bit    Registers := 61    
++---RAMs : 
+	               9K Bit	(256 X 36 bit)          RAMs := 1     
+	               8K Bit	(256 X 35 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 2     
+	   2 Input   64 Bit        Muxes := 8     
+	   2 Input   52 Bit        Muxes := 2     
+	   2 Input   36 Bit        Muxes := 1     
+	   2 Input   35 Bit        Muxes := 1     
+	   2 Input   34 Bit        Muxes := 1     
+	  12 Input   32 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	  18 Input   17 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 5     
+	   2 Input    9 Bit        Muxes := 7     
+	   2 Input    8 Bit        Muxes := 11    
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 51    
+	   3 Input    2 Bit        Muxes := 21    
+	   4 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 57    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[3] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[2] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[1] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARPROT[2] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARPROT[1] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARPROT[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_ARUSER[0] in module quantization_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[3] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[2] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[1] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWCACHE[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWPROT[2] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWPROT[1] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWPROT[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_AWUSER[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_HLS_WUSER[0] in module quantization_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWID[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWSIZE[2] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWSIZE[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWSIZE[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWBURST[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWBURST[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWLOCK[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_AWLOCK[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_WID[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_WLAST in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARID[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARSIZE[2] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARSIZE[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARSIZE[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARBURST[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARBURST[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARLOCK[1] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port I_ARLOCK[0] in module quantization_gmem_m_axi is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module quantization.
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module quantization.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:49 . Memory (MB): peak = 1270.352 ; gain = 8.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | gmem_m_axi_U/bus_write/buff_wdata/mem_reg | 256 x 36(READ_FIRST)   | W |   | 256 x 36(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst        | gmem_m_axi_U/bus_read/buff_rdata/mem_reg  | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:02:00 . Memory (MB): peak = 1270.352 ; gain = 8.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:02:06 . Memory (MB): peak = 1300.289 ; gain = 38.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | gmem_m_axi_U/bus_write/buff_wdata/mem_reg | 256 x 36(READ_FIRST)   | W |   | 256 x 36(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst        | gmem_m_axi_U/bus_read/buff_rdata/mem_reg  | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:02:08 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:02:16 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:02:16 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:02:17 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:02:17 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:02:17 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:02:17 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[4]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[4]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[14] | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[4]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   146|
+|2     |LUT1     |    44|
+|3     |LUT2     |   164|
+|4     |LUT3     |   603|
+|5     |LUT4     |   229|
+|6     |LUT5     |   100|
+|7     |LUT6     |   293|
+|8     |RAMB18E1 |     2|
+|9     |SRL16E   |   163|
+|10    |FDRE     |  2120|
+|11    |FDSE     |     4|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:02:17 . Memory (MB): peak = 1310.352 ; gain = 48.406
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:59 . Memory (MB): peak = 1310.352 ; gain = 40.000
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:02:17 . Memory (MB): peak = 1310.352 ; gain = 48.406
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 1313.223 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 148 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1316.914 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 625a6f33
+INFO: [Common 17-83] Releasing license: Synthesis
+64 Infos, 86 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:02:46 . Memory (MB): peak = 1316.914 ; gain = 54.969
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx/vivado/final1/final1.runs/design_1_quantization_0_0_synth_1/design_1_quantization_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_quantization_0_0, cache-ID = decda4a81e566b99
+INFO: [Coretcl 2-1174] Renamed 17 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx/vivado/final1/final1.runs/design_1_quantization_0_0_synth_1/design_1_quantization_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_quantization_0_0_utilization_synth.rpt -pb design_1_quantization_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 14 15:47:09 2021...
